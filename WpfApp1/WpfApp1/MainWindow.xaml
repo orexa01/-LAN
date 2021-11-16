@@ -1,0 +1,265 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="FREQUENCY TRANSFER DEVICES" Height="570" Width="660" ResizeMode="CanMinimize">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFCECECE" Offset="0.003"/>
+            <GradientStop Color="#FFDFDFDF" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid Margin="0,0,-0.4,0" Height="500" HorizontalAlignment="Left" VerticalAlignment="Top" Width="650">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="0,0,-0.4,-51" HorizontalAlignment="Left" VerticalAlignment="Top">
+            
+       
+        <GroupBox Header="Подключение" HorizontalAlignment="Left" Height="75" Margin="10,0,0,0" VerticalAlignment="Top" Width="630" FontSize="18" BorderBrush="White" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Animated" FontStretch="SemiCondensed" FontWeight="Bold" Foreground="Black">
+            <GroupBox.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FFADADAE"/>
+                    <GradientStop Color="#FFBEBEBF" Offset="1"/>
+                </RadialGradientBrush>
+            </GroupBox.Background>
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal" Margin="55,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="504" Height="45">
+                    <TextBox x:Name="edtId"  HorizontalAlignment="Left" Height="30" Margin="5,0,0,0" TextWrapping="Wrap" Text="192.168.1.77" VerticalAlignment="Center" TextAlignment="Center" FontSize="18" IsUndoEnabled="True" Width="174" BorderBrush="#FF8E8E8E" Background="#FFC3C3C3" SelectionBrush="#FFFF0025" Foreground="Black">
+                        <TextBox.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="7,0,0,7"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                    <TextBox x:Name="edtPORT"  HorizontalAlignment="Left" Height="30" Margin="5,0,0,0" TextWrapping="Wrap" Text="5025" VerticalAlignment="Center" TextAlignment="Center" FontSize="18" IsUndoEnabled="True" Width="65" BorderBrush="#FF8E8E8E" Background="#FFC3C3C3" SelectionBrush="#FFFF0025" Foreground="Black">
+                        <TextBox.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="0,7,7,0"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                    <Button x:Name="btnE8257D" IsDefault = "true" Content="Connect" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center" Height="30"  FontSize="18" BorderBrush="{x:Null}" Width="245" Foreground="White" Click="btnE8257D_Click" >
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="7"/>
+                            </Style>
+                        </Button.Resources>
+                        <Button.Background>
+                            <RadialGradientBrush>
+                                <GradientStop Color="#FF737070" Offset="1"/>
+                                <GradientStop Color="#FF666161"/>
+                            </RadialGradientBrush>
+                        </Button.Background>
+                    </Button>
+                </StackPanel>
+
+
+
+            </StackPanel>
+
+
+
+        </GroupBox>
+
+        <GroupBox Header="Управление каналом" Width="630" Height="315" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,5,0,0" FontSize="18" BorderBrush="White" FontWeight="Bold">
+            <GroupBox.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FFADADAE"/>
+                    <GradientStop Color="#FFBEBEBF" Offset="1"/>
+                </RadialGradientBrush>
+            </GroupBox.Background>
+            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal">
+                <GroupBox x:Name="up" Header="Перенос вверх" HorizontalAlignment="Left" Height="270" Margin="5,5,0,0" VerticalAlignment="Top" Width="300" FontSize="18" BorderBrush="White" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Animated" FontStretch="SemiCondensed" FontWeight="Bold" Foreground="Black" IsEnabled="False">
+                    <GroupBox.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="#FF868686"/>
+                            <GradientStop Color="#FFA3A3A3" Offset="1"/>
+                        </RadialGradientBrush>
+                    </GroupBox.Background>
+                    <StackPanel>
+
+                        <StackPanel Width="250" Margin="0,10,0,0">
+                                <TextBlock Text="Частота" FontSize="16"/>
+                            <StackPanel Orientation="Horizontal" Margin="5,0,0,0">
+
+                                <TextBox x:Name="Freq_UP"  HorizontalAlignment="Left" Height="34" Margin="0" TextWrapping="Wrap" VerticalAlignment="Center" Width="170" FontSize="18" TextAlignment="Center" BorderBrush="#FF8E8E8E" Background="#FFC3C3C3" SelectionBrush="#FFFF0025" Foreground="Black">
+                                    <TextBox.Resources>
+                                        <Style TargetType="Border">
+                                            <Setter Property="CornerRadius" Value="7,0,0,7"/>
+                                        </Style>
+                                    </TextBox.Resources>
+                                </TextBox>
+                                <ComboBox x:Name="Freq_UP_cmb" Margin="5,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" SelectedIndex="1" FontSize="18" Foreground="Black" BorderBrush="DarkBlue" Background="{x:Null}" Width="70" Height="34">
+                                    <TextBlock FontSize="16"><Run Text="GHZ"/></TextBlock>
+                                    <TextBlock FontSize="16"><Run Text="MHZ"/></TextBlock>
+
+                                </ComboBox>
+                            </StackPanel>
+                            <Button x:Name="Freq_UP_btn"   Margin="5,5,0,0" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Left" BorderBrush="{x:Null}" Width="241" Height="34" Foreground="White" Content="Отправить" Click="Freq_UP_btn_Click" >
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="7"/>
+                                    </Style>
+                                </Button.Resources>
+                                <Button.Background>
+                                    <RadialGradientBrush>
+                                        <GradientStop Color="#FF737070" Offset="1"/>
+                                        <GradientStop Color="#FF666161"/>
+                                    </RadialGradientBrush>
+                                </Button.Background>
+                            </Button>
+
+                                <TextBlock Text="Коэффициент передачи" FontSize="16"/>
+                        </StackPanel>
+                        <StackPanel Width="250" Margin="0,10,0,0">
+
+                            <StackPanel Orientation="Horizontal" Margin="5,0,0,0">
+                                <TextBox x:Name="AMP_UP" HorizontalAlignment="Left" Height="34" Margin="0" TextWrapping="Wrap" VerticalAlignment="Center" Width="170" FontSize="18" TextAlignment="Center" BorderBrush="#FF8E8E8E" Background="#FFC3C3C3" SelectionBrush="#FFFF0025" Foreground="Black">
+                                    <TextBox.Resources>
+                                        <Style TargetType="Border">
+                                            <Setter Property="CornerRadius" Value="7,0,0,7"/>
+                                        </Style>
+                                    </TextBox.Resources>
+                                </TextBox>
+                                <ComboBox x:Name="AMP_UP_cmb" Margin="5,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" SelectedIndex="0" FontSize="18" Foreground="Black" BorderBrush="DarkBlue" Background="{x:Null}" Width="70" Height="34">
+                                    <TextBlock FontSize="16"><Run Text="dBm"/></TextBlock>
+                                    <TextBlock FontSize="16"><Run Text="dB"/></TextBlock>
+                                </ComboBox>
+                            </StackPanel>
+                            <Button x:Name="AMP_UP_btn"   Margin="5,5,0,0" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Left" BorderBrush="{x:Null}" Width="241" Height="34" Foreground="White" Content="Отправить" Click="AMP_UP_btn_Click" >
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="7"/>
+                                    </Style>
+                                </Button.Resources>
+                                <Button.Background>
+                                    <RadialGradientBrush>
+                                        <GradientStop Color="#FF737070" Offset="1"/>
+                                        <GradientStop Color="#FF666161"/>
+                                    </RadialGradientBrush>
+                                </Button.Background>
+                            </Button>
+                            <CheckBox x:Name="UP_RF" Visibility="Collapsed" Foreground="Black" Background="{x:Null}" Content="RF" BorderBrush="Black" Checked="UP_RF_Checked" Unchecked="UP_RF_Unchecked" />
+                        </StackPanel>
+                    </StackPanel>
+                </GroupBox>
+
+                <GroupBox x:Name="down" Header="Перенос вниз" HorizontalAlignment="Left" Height="270" Margin="5,5,0,0" VerticalAlignment="Top" Width="300" FontSize="18" BorderBrush="White" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Animated" FontStretch="SemiCondensed" FontWeight="Bold" Foreground="Black" IsEnabled="False">
+                    <GroupBox.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="#FF868686"/>
+                            <GradientStop Color="#FFA3A3A3" Offset="1"/>
+                        </RadialGradientBrush>
+                    </GroupBox.Background>
+                    <StackPanel>
+
+                        <StackPanel Width="250" Margin="0,10,0,0">
+                                <TextBlock Text="Частота" FontSize="16"/>
+                            <StackPanel Orientation="Horizontal" Margin="5,0,0,0">
+                                <TextBox x:Name="Freq_DOWN"  HorizontalAlignment="Left" Height="34" Margin="0" TextWrapping="Wrap" VerticalAlignment="Center" Width="170" FontSize="18" TextAlignment="Center" BorderBrush="#FF8E8E8E" Background="#FFC3C3C3" SelectionBrush="#FFFF0025" Foreground="Black">
+                                    <TextBox.Resources>
+                                        <Style TargetType="{x:Type Border}">
+                                            <Setter Property="CornerRadius" Value="7,0,0,7"/>
+                                        </Style>
+                                    </TextBox.Resources>
+                                </TextBox>
+                                <ComboBox x:Name="Freq_DOWN_cmb" Margin="5,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" SelectedIndex="1" FontSize="18" Foreground="Black" BorderBrush="DarkBlue" Background="{x:Null}" Width="70" Height="34">
+                                    <TextBlock FontSize="16"><Run Text="GHZ"/></TextBlock>
+                                    <TextBlock FontSize="16"><Run Text="MHZ"/></TextBlock>
+
+                                </ComboBox>
+                            </StackPanel>
+                            <Button x:Name="Freq_DOWN_btn1" Click="Freq_DOWN_btn_Click"  Margin="5,5,0,0" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Left" BorderBrush="{x:Null}" Width="241" Height="34" Foreground="White" Content="Отправить" >
+                                <Button.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="7"/>
+                                    </Style>
+                                </Button.Resources>
+                                <Button.Background>
+                                    <RadialGradientBrush>
+                                        <GradientStop Color="#FF737070" Offset="1"/>
+                                        <GradientStop Color="#FF666161"/>
+                                    </RadialGradientBrush>
+                                </Button.Background>
+                            </Button>
+                        </StackPanel>
+                        <StackPanel Width="250" Margin="0,10,0,0">
+                                <TextBlock Text="Коэффициент передачи" FontSize="16"/>
+                            <StackPanel Orientation="Horizontal" Margin="5,0,0,0">
+                                <TextBox x:Name="AMP_DOWN"  HorizontalAlignment="Left" Height="34" Margin="0" TextWrapping="Wrap" VerticalAlignment="Center" Width="170" FontSize="18" TextAlignment="Center" BorderBrush="#FF8E8E8E" Background="#FFC3C3C3" SelectionBrush="#FFFF0025" Foreground="Black">
+                                    <TextBox.Resources>
+                                        <Style TargetType="{x:Type Border}">
+                                            <Setter Property="CornerRadius" Value="7,0,0,7"/>
+                                        </Style>
+                                    </TextBox.Resources>
+                                </TextBox>
+                                <ComboBox x:Name="AMP_DOWN_cmb" Margin="5,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" SelectedIndex="0" FontSize="18" Foreground="Black" BorderBrush="DarkBlue" Background="{x:Null}" Width="70" Height="34">
+                                    <TextBlock FontSize="16"><Run Text="dBm"/></TextBlock>
+                                    <TextBlock FontSize="16"><Run Text="dB"/></TextBlock>
+                                </ComboBox>
+                            </StackPanel>
+                            <Button x:Name="AMP_DOWN_btn1" Click="AMP_DOWN_btn_Click"  Margin="5,5,0,0" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Left" BorderBrush="{x:Null}" Width="241" Height="34" Foreground="White" Content="Отправить" >
+                                <Button.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="7"/>
+                                    </Style>
+                                </Button.Resources>
+                                <Button.Background>
+                                    <RadialGradientBrush>
+                                        <GradientStop Color="#FF737070" Offset="1"/>
+                                        <GradientStop Color="#FF666161"/>
+                                    </RadialGradientBrush>
+                                </Button.Background>
+                            </Button>
+                            <CheckBox x:Name="DOWN_RF" Visibility="Collapsed" Foreground="Black" Background="{x:Null}" Content="RF" BorderBrush="Black" />
+                        </StackPanel>
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+        </GroupBox>
+            <GroupBox x:Name="Send" Header="Прием-передача запроса" HorizontalAlignment="Left" Height="125" Margin="10,5,0,0" VerticalAlignment="Top" Width="630" FontSize="18" BorderBrush="White" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Animated" FontWeight="Bold" FontStretch="SemiCondensed" Foreground="Black" IsEnabled="False">
+                <GroupBox.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FFADADAE"/>
+                        <GradientStop Color="#FFBEBEBF" Offset="1"/>
+                    </RadialGradientBrush>
+                </GroupBox.Background>
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox x:Name="send_Synt"  HorizontalAlignment="Left" Height="34" Margin="10,5,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="390" FontSize="18" TextAlignment="Center" BorderBrush="#FF8E8E8E" Background="#FFC3C3C3" SelectionBrush="#FFFF0025" Foreground="Black">
+                            <TextBox.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius" Value="7"/>
+                                </Style>
+                            </TextBox.Resources>
+                        </TextBox>
+                        <Button x:Name="send_btn"  Margin="5,5,0,0" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Left" BorderBrush="{x:Null}" Width="190" Height="34" Foreground="White" Content="Отправить" Click="send_btn_Click">
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius" Value="7"/>
+                                </Style>
+                            </Button.Resources>
+                            <Button.Background>
+                                <RadialGradientBrush>
+                                    <GradientStop Color="#FF737070" Offset="1"/>
+                                    <GradientStop Color="#FF666161"/>
+                                </RadialGradientBrush>
+                            </Button.Background>
+                        </Button>
+                    </StackPanel>
+                    <TextBox x:Name="Return_Synt"  HorizontalAlignment="Left" Height="34" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="585" FontSize="18" TextAlignment="Center" BorderBrush="#FF8E8E8E" Background="#FFC3C3C3" SelectionBrush="#FFFF0025" Foreground="Black">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="7"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+    </Grid>
+</Window>
